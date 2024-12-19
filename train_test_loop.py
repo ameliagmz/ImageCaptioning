@@ -224,7 +224,6 @@ def train_image_captioning_model(model, train_dataloader, val_dataloader, criter
     avg_val_rouge_l = cumulative_val_rouge_l / num_epochs
     avg_val_meteor = cumulative_val_meteor / num_epochs  
 
-    plot_losses(train_losses, val_losses, train_losses_plot_path)
     plot_metrics_and_save([avg_train_bleu1, avg_train_bleu2, avg_train_rouge_l, avg_train_meteor],
                             train_metrics_plot_path, "Average Training Metrics")
     plot_metrics_and_save(
